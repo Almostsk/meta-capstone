@@ -1,0 +1,6 @@
+.miniCartIco {
+    transition: all 0.5 ease;
+}
+.miniCartIco:hover {
+    fill: #44695c;
+}
