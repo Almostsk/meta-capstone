@@ -80,7 +80,7 @@ const Confirmation = ({ data, isOpen = false }) => {
           <Button
             onClick={handleClose}
             label="Confirm"
-            classes="hover:text-black"
+            classes="hover:!text-black"
           />
         </div>
       </DialogFooter>

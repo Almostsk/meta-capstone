@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
 import { IconContext } from "react-icons";
-import { MdMenu } from "react-icons/md";
+import { MdMenu, MdClose } from "react-icons/md";
 import { ICON_COLOR } from "../../../../constants";
 import Logo from "../../../../assets/img/logo.jpg";
+import "./styles.css";
 
 const LINKS_DATA = [
   { label: "Home", url: "/" },
@@ -20,10 +21,10 @@ const Navigation = () => {
 
   return (
     <nav className="bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-2 ">
+        <div className="flex items-center justify-between h-16 nav-container">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 md:mr-4 md:ml-0 ml-4">
               <Link to="/" role="link">
                 <img className="h-8 w-auto" src={Logo} alt="Logo" />
               </Link>
@@ -49,9 +50,7 @@ const Navigation = () => {
               role="button"
             >
               <IconContext.Provider value={{ color: ICON_COLOR, size: "36px" }}>
-                <div>
-                  <MdMenu />
-                </div>
+                <div>{!isOpen ? <MdMenu /> : <MdClose />}</div>
               </IconContext.Provider>
             </Button>
           </div>
@@ -60,7 +59,7 @@ const Navigation = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden absolute bg-white pr-4 transition duration-700">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {LINKS_DATA.map((link) => (
               <Link

@@ -7,7 +7,10 @@ const ListItem = ({
   img,
 }) => {
   return (
-    <div className="flex justify-between py-2 border-b border-gray">
+    <div
+      data-testid="list-item"
+      className="flex justify-between py-2 border-b border-gray"
+    >
       <div className="w-8/12 flex flex-col ">
         <span className="font-semibold text-base">{name}</span>
         <p className="text-primary1 text-xs">{description}</p>

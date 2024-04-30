@@ -124,7 +124,7 @@ const CustomerInfo = () => {
           />
         </div>
       </div>
-      {availableTables.length && (
+      {!!availableTables.length && (
         <>
           <Tables name="selectedTable" options={availableTables} />
           <ErrorMessage
