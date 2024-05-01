@@ -9,7 +9,7 @@ const ListItem = ({
   return (
     <div
       data-testid="list-item"
-      className="flex justify-between py-2 border-b border-gray"
+      className="flex justify-between p-2 bg-white06 rounded-md"
     >
       <div className="w-8/12 flex flex-col ">
         <span className="font-semibold text-base">{name}</span>
