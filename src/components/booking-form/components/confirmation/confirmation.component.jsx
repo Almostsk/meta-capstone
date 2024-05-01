@@ -51,7 +51,12 @@ const Confirmation = ({ data, isOpen = false }) => {
   ];
 
   return (
-    <Dialog open={open} handler={handleOpen}>
+    <Dialog
+      open={open}
+      handler={handleOpen}
+      role="dialog"
+      data-testid="confirmationDialog"
+    >
       <DialogHeader>
         <div className="w-full">
           <p className="text-primary1 uppercase text-center w-full font-semibold">

@@ -24,6 +24,8 @@ const CustomerInfo = () => {
           as={Input} // Using Material Tailwind Input
           label="Name"
           aria-label="name"
+          aria-labelledby="name"
+          data-testid="nameField"
           type="text"
           name="name"
           error={Boolean(touched.name && errors.name)}
@@ -39,7 +41,9 @@ const CustomerInfo = () => {
           as={Input}
           type="text"
           name="phoneNumber"
+          data-testid="phoneNumberField"
           label="Phone Number"
+          aria-labelledby="phoneNumber"
           aria-label="Phone Number"
           error={Boolean(touched.phoneNumber && errors.phoneNumber)}
         />
@@ -57,6 +61,8 @@ const CustomerInfo = () => {
           <DatePicker
             id="date"
             name="date"
+            data-testid="dateField"
+            aria-labelledby="date"
             aria-label="date"
             selected={values.date}
             onChange={(date) => setFieldValue("date", date)}
@@ -76,6 +82,8 @@ const CustomerInfo = () => {
             as="select"
             id="time"
             name="time"
+            data-testid="timeField"
+            aria-labelledby="time"
             aria-label="time"
             value={values.time}
             onChange={(event) => setFieldValue("time", event.target.value)}
@@ -104,6 +112,8 @@ const CustomerInfo = () => {
             as="select"
             id="occasion"
             name="occasion"
+            data-testid="occasionField"
+            aria-labelledby="occasion"
             value={values.occasion}
             onChange={(event) => setFieldValue("occasion", event.target.value)}
             className={`form-select mt-1 block w-full rounded-md p-2 border border-darkGray`}
