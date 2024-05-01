@@ -13,6 +13,7 @@ module.exports = withMT({
       gray: "#EDEFEE",
       darkGray: "#B0BEC5",
       darkerGray: "#455A64",
+      white06: "rgba(255, 255, 255, .6)",
     },
     fontFamily: {
       sans: ["Markazi", "sans-serif"],
